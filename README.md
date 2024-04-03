@@ -8,7 +8,7 @@
 **Intervenant** : Florian Jourde  
 **Contact** : [jourdeflorian@gmail.com](www.jourdeflorian@gmail.com)  
 
-maire](https://img.shields.io/badge/Sommaire-383d42?style=for-the-badge)
+## ![Sommaire](https://img.shields.io/badge/Sommaire-383d42?style=for-the-badge)
 <ol>
   <li><a href="#1-child-theme">Création de thèmes enfants</a>
     <ol>
@@ -237,23 +237,5 @@ En utilisant ces instructions, vous pouvez créer et associer des champs personn
 
 ---
 
-<!-- 
-2 - Création de thèmes enfants avec styles.css et functions.php (30 minutes)
-Explication de ce qu'est un thème enfant et pourquoi il est utile.
-
-3 - Création d'un thème enfant à partir d'un thème parent existant.
-Personnalisation du thème enfant en ajoutant des styles CSS dans le fichier styles.css et des fonctionnalités dans le fichier functions.php.
-
-4 - Création et personnalisation de pages (40 minutes)
-Création de pages dans WordPress.
-Personnalisation de ces pages en utilisant les fonctionnalités de l'éditeur de blocs de Gutenberg.
-Ajout de contenu statique et dynamique aux pages.
-Création de pages avec ACF (40 minutes)
-
-Installation et configuration du plugin Advanced Custom Fields (ACF).
-Création de champs personnalisés dans ACF pour les pages créées précédemment.
-Liaison des champs ACF aux pages pour permettre au client de saisir des informations de manière dynamique.
-
-5 - Création de modèles de page personnalisés (30 minutes)
-Explication des modèles de page personnalisés et de leur utilité dans la conception de sites Web.
-Création d'un modèle de page personnalisé dans WordPress en utilisant des fichiers de modèle. -->
+## ![Annexes](https://img.shields.io/badge/Annexes-383d42?style=for-the-badge)
+- https://wpmarmite.com/child-theme-wordpress/
