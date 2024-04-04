@@ -54,7 +54,6 @@
 
 ---
 
-
 <h2 id="1-wordpress-installation"> 
 
 ![Installation de WordPress avec Wamp](https://img.shields.io/badge/1-Installation_de_WordPress_avec_Wamp-431ea1?style=for-the-badge)
@@ -81,7 +80,7 @@ define( 'DB_HOST', 'localhost' );
 
 <h2 id="2-wordpress-advantages"> 
 
-![Les avantages de WordPress](https://img.shields.io/badge/1-Les_avantages_de_WordPress-431ea1?style=for-the-badge)
+![Les avantages de WordPress](https://img.shields.io/badge/2-Les_avantages_de_WordPress-431ea1?style=for-the-badge)
 
 </h2>
 
