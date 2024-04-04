@@ -77,7 +77,6 @@ define( 'DB_PASSWORD', 'mot_de_passe' );
 define( 'DB_HOST', 'localhost' );
 ```
 
-
 <h2 id="2-wordpress-advantages"> 
 
 ![Les avantages de WordPress](https://img.shields.io/badge/2-Les_avantages_de_WordPress-431ea1?style=for-the-badge)
@@ -312,5 +311,6 @@ En utilisant ces instructions, vous pouvez créer et associer des champs personn
 ---
 
 ## ![Annexes](https://img.shields.io/badge/Annexes-383d42?style=for-the-badge)
+
 - https://wordpress.org/download/
 - https://wpmarmite.com/child-theme-wordpress/
