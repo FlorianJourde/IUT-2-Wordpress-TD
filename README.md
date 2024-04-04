@@ -298,6 +298,10 @@ function custom_post_type() {
 
 Cette déclaration peut-être directement effectuée dans le fichier `functions.php`, mais peut également être déclarée dans un fichier dédié. Cette solution sera d'ailleurs privilégiée, à mesure que le site s’étoffe, que les champs personnalisées ou autres fonctionnalités se font plus nombreuses.
 
+![ACF Screenshot](images/acf-screenshot-1.png)
+
+![ACF Screenshot](images/acf-screenshot-2.png)
+
 ### ![Liaison des champs ACF aux pages](https://img.shields.io/badge/6.5-Liaison_des_champs_ACF_aux_pages-33177b?style=flat-square)
 
 Une fois les champs personnalisés créés, associez-les à vos pages en utilisant leur identifiant unique. Par exemple, pour associer le champ "titre_alternatif" à une page, utilisez le code suivant dans le fichier de modèle de la page :
