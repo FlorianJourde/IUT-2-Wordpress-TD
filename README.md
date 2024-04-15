@@ -1,4 +1,3 @@
-
 ![Bannière](images/uit-wordpress-banner-td.png)
 
 ## ![Informations](https://img.shields.io/badge/Informations-431ea1?style=for-the-badge)
@@ -10,12 +9,12 @@
 
 ## ![Sommaire](https://img.shields.io/badge/Sommaire-383d42?style=for-the-badge)
 <ol>
-  <li><a href="#1-wordpress-installation">Installation de WordPress avec Wamp</a>
+  <li><a href="#1-installation">Installation de WordPress avec Wamp</a>
     <ol>
       <li>Installation de WordPress</li>
     </ol>
   </li>
-  <li><a href="#2-wordpress-advantages">Les avantages de WordPress</a>
+  <li><a href="#2-advantages">Les avantages de WordPress</a>
     <ol>
       <li>Gestion du contenu simplifiée</li>
       <li>Fonctionnalités intégrées</li>
@@ -54,7 +53,7 @@
 
 ---
 
-<h2 id="1-wordpress-installation"> 
+<h2 id="1-installation"> 
 
 ![Installation de WordPress avec Wamp](https://img.shields.io/badge/1-Installation_de_WordPress_avec_Wamp-431ea1?style=for-the-badge)
 
@@ -77,7 +76,7 @@ define( 'DB_PASSWORD', 'mot_de_passe' );
 define( 'DB_HOST', 'localhost' );
 ```
 
-<h2 id="2-wordpress-advantages"> 
+<h2 id="2-advantages"> 
 
 ![Les avantages de WordPress](https://img.shields.io/badge/2-Les_avantages_de_WordPress-431ea1?style=for-the-badge)
 
@@ -318,3 +317,4 @@ En utilisant ces instructions, vous pouvez créer et associer des champs personn
 
 - https://wordpress.org/download/
 - https://wpmarmite.com/child-theme-wordpress/
+- https://developer.wordpress.org/themes/basics/template-hierarchy/
