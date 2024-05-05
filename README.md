@@ -326,6 +326,8 @@ En utilisant ces instructions, vous pouvez créer et associer des champs personn
 
 ## ![Notes](https://img.shields.io/badge/Notes-383d42?style=for-the-badge)
 
+### ![Notes de cours](https://img.shields.io/badge/06/06/2024-Notes_de_cours-33177b?style=flat-square)
+
 ---
 
 ## ![Annexes](https://img.shields.io/badge/Annexes-383d42?style=for-the-badge)
