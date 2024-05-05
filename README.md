@@ -1,11 +1,13 @@
 ![Bannière](images/uit-wordpress-banner-td.png)
 
-## ![Informations](https://img.shields.io/badge/Informations-431ea1?style=for-the-badge)
+## ![Informations](https://img.shields.io/badge/Informations-383d42?style=for-the-badge)
 
 **Date** : Mai 2024  
 **Session** : MMI 1 2023/2024  
 **Intervenant** : Florian Jourde  
 **Contact** : [jourdeflorian@gmail.com](www.jourdeflorian@gmail.com)  
+
+---
 
 ## ![Sommaire](https://img.shields.io/badge/Sommaire-383d42?style=for-the-badge)
 <ol>
@@ -310,6 +312,10 @@ Une fois les champs personnalisés créés, associez-les à vos pages en utilisa
 ```
 
 En utilisant ces instructions, vous pouvez créer et associer des champs personnalisés avec ACF à vos pages WordPress pour une personnalisation avancée.
+
+---
+
+## ![Notes](https://img.shields.io/badge/Notes-383d42?style=for-the-badge)
 
 ---
 
