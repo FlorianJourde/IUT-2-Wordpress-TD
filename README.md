@@ -27,6 +27,7 @@
     <ol>
       <li>Qu'est-ce qu'un thème enfant ?</li>
       <li>Création d'un thème enfant</li>
+      <li>Hiérarchie des modèles</li>
     </ol>
   </li>
   <li><a href="#4-page-creation">Création et personnalisation de pages</a>
@@ -155,6 +156,14 @@ Ajoutez l'en-tête du thème dans ce fichier. Voici un exemple d'en-tête :
 3. Assurez-vous que le nom du thème parent (Template) correspond exactement au répertoire du thème parent tel qu'il est enregistré dans le répertoire `wp-content/themes/`.
 
 4. Pour activer le thème enfant, accédez à l'administration WordPress de votre site. Allez dans l'onglet "Apparence" puis "Thèmes". Vous devriez voir votre thème enfant répertorié. Activez-le en cliquant sur le bouton "Activer".
+
+### ![Hiérarchie des modèles](https://img.shields.io/badge/3.3-Hiérarchie_des_modèles-33177b?style=flat-square)
+
+Il est important de comprendre que les thèmes Wordpress fonctionnent sur un principe de hiérarchie, ainsi que de surcharge. Ci-après, vous trouverez un schéma permettant de visualiser comment fonctionne ce principe. 
+
+![Wordpress template hierarchy](images/template-hierarchy.webp)
+
+Vous retrouverez ce schéma, ainsi que des informations annexes, sur cette page : https://developer.wordpress.org/themes/basics/template-hierarchy/.
 
 <h2 id="4-page-creation"> 
 
