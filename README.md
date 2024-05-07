@@ -329,10 +329,8 @@ En utilisant ces instructions, vous pouvez créer et associer des champs personn
 ### ![Notes de cours](https://img.shields.io/badge/6.5.24-Notes_de_cours-33177b?style=flat-square)
 
 Créer un compte sur [000webhost](https://fr.000webhost.com/), le mot de passe sera partagé suite à l'évaluation, il ne doit donc pas être confidentiel.
-- **Nom du site** :
-mariokart-nomdefamille.000webhost.com  
-- **Suggestion de mot de passe** :
-P@ssword1
+- **Nom du site** : `mariokart-nomdefamille.000webhost.com`  
+- **Suggestion de mot de passe** : `P@ssword1`
 
 ---
 
