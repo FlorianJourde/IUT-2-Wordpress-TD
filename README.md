@@ -334,15 +334,26 @@ Créer un compte sur [000webhost](https://fr.000webhost.com/), le mot de passe s
 
 ### ![Notes de cours](https://img.shields.io/badge/14.5.24-Notes_de_cours-33177b?style=flat-square)
 
-1. 000webhost ne fonctionne pas, créer un compte sur Netlify
-  Deploy your first project.
-  Not ready yet? Skip this step for now.
+*Penser à supprimer les comptes 000webhost & Netlify : nous utiliserons finalement vos serveurs personnels de l'IUT !*
 
-2. Download Wordpress : https://wordpress.org/download/
+1. Télécharger Wordpress : https://wordpress.org/download/
 
-3. Installer le theme `twentytwentyone`
+2. Installer le theme `twentytwentyone`
 
-Supprimer les comptes 000webhost & Netlify.
+*N.b. : Pour optimiser l'édition des fichiers via FileZilla ou WinSCP, il est possible de modifier les réglage d'associations personnalisée en ajoutant ces lignes dans les paramètres :*
+```
+html "C:\Program Files\Microsoft VS Code\Code.exe" %f
+php "C:\Program Files\Microsoft VS Code\Code.exe" %f
+css "C:\Program Files\Microsoft VS Code\Code.exe" %f
+```
+
+3. Créer un thème enfant `twentytwentyone-child` : https://developer.wordpress.org/themes/advanced-topics/child-themes/
+
+*N.b. : Pour accélerer l'apprentissage de la techno, vous êtes libre de réutiliser le code déjà produit pour la réalisation de ce exercice, directement sur [le repo GitHub](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87/tree/main/wp-content/themes/tewntytwentyone-child).*
+
+Documentations sur les "Hooks" : https://capitainewp.io/formations/developper-theme-wordpress/hooks-functions/
+
+Documentations sur les "Custom Post Types" : https://wpmarmite.com/snippet/creer-custom-post-type/
 
 ---
 
