@@ -342,6 +342,8 @@ Créer un compte sur [000webhost](https://fr.000webhost.com/), le mot de passe s
 
 3. Installer le theme `twentytwentyone`
 
+Supprimer les comptes 000webhost & Netlify.
+
 ---
 
 ## ![Annexes](https://img.shields.io/badge/Annexes-383d42?style=for-the-badge)
