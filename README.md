@@ -332,6 +332,16 @@ Créer un compte sur [000webhost](https://fr.000webhost.com/), le mot de passe s
 - **Nom du site** : `mariokart-nomdefamille.000webhost.com`  
 - **Suggestion de mot de passe** : `P@ssword1`
 
+### ![Notes de cours](https://img.shields.io/badge/14.5.24-Notes_de_cours-33177b?style=flat-square)
+
+1. 000webhost ne fonctionne pas, créer un compte sur Netlify
+  Deploy your first project.
+  Not ready yet? Skip this step for now.
+
+2. Download Wordpress : https://wordpress.org/download/
+
+3. Installer le theme `twentytwentyone`
+
 ---
 
 ## ![Annexes](https://img.shields.io/badge/Annexes-383d42?style=for-the-badge)
