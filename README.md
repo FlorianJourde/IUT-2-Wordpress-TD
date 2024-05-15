@@ -355,6 +355,43 @@ Documentations sur les "Hooks" : https://capitainewp.io/formations/developper-th
 
 Documentations sur les "Custom Post Types" : https://wpmarmite.com/snippet/creer-custom-post-type/
 
+Presse papier
+https://www.photopea.com/
+
+### ![Notes de cours](https://img.shields.io/badge/15.5.24-Notes_de_cours-33177b?style=flat-square)
+
+Pour afficher les éléments à l'aide d'ACF, une boucle doit être utilisée afin que tous les "posts" déclarés soient affichés. Il est ensuite possible de personnaliser cette requête pour formater les données comme on le souhaite : vitesse, poids, dégâts...
+
+```php
+<?php 
+
+$posts = get_posts(array(
+    'posts_per_page'    => -1,
+    'post_type'         => 'post'
+));
+
+if( $posts ): ?>
+    
+    <ul>
+        
+    <?php foreach( $posts as $post ): 
+        
+        setup_postdata( $post );
+        
+        ?>
+        <li>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </li>
+    
+    <?php endforeach; ?>
+    
+    </ul>
+    
+    <?php wp_reset_postdata(); ?>
+
+<?php endif; ?>
+```
+
 ---
 
 ## ![Annexes](https://img.shields.io/badge/Annexes-383d42?style=for-the-badge)
