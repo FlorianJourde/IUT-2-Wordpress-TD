@@ -347,11 +347,11 @@ php "C:\Program Files\Microsoft VS Code\Code.exe" %f
 css "C:\Program Files\Microsoft VS Code\Code.exe" %f
 ```
 
-![ACF Screenshot](images/filezilla-defaut.png)
+![FileZilla](images/filezilla-defaut.png)
 
 3. Créer un thème enfant `twentytwentyone-child` : https://developer.wordpress.org/themes/advanced-topics/child-themes/
 
-*N.b. : Pour accélerer l'apprentissage de la techno, vous êtes libre de réutiliser le code déjà produit pour la réalisation de ce exercice, directement sur [le repo GitHub](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87/tree/main/wp-content/themes/tewntytwentyone-child).*
+*N.b. : Pour accélérer l'apprentissage de la techno, vous êtes libre de réutiliser le code déjà produit pour la réalisation de ce exercice, directement sur [le repo GitHub](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87/tree/main/wp-content/themes/tewntytwentyone-child).*
 
 Documentations sur les "Hooks" : https://capitainewp.io/formations/developper-theme-wordpress/hooks-functions/
 
@@ -361,14 +361,14 @@ Documentations sur les "Custom Post Types" : https://wpmarmite.com/snippet/creer
 
 Le thème `twentytwentyone-child`, disponible sur GitHub, peut être glissé à côté du dossier `twentytwentyone`, afin de réaliser une surcharge du thème parent, sans destruction de celui-ci. Il suffire ensuite de l'activer via le tableau de bord.
 
-![ACF Screenshot](images/child-theme.png)
+![Thème enfant](images/child-theme.png)
 
 Idem pour les extensions/plugins. Les trois dont nous avons besoin pour réaliser ce TD sont les suivantes :
 - `advanced-custom-fields-pro`
 - `akeebabackupwp`
 - `classic-editor`
 
-Parmis les méthodes les plus employées sur WordPress, on peut rétrouver les suivantes :
+Parmi les méthodes les plus employées sur WordPress, on peut retrouver les suivantes :
 ```php
   // Affiche le titre de la page
   <?php var_dump(get_the_title()); ?>
@@ -383,7 +383,7 @@ Parmis les méthodes les plus employées sur WordPress, on peut rétrouver les s
   <img src="<?= get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') ?>" alt="">
   
   // Affiche un champ ACF, préalablement défini dans les paramètres de l'extension
-  <?php var_dump(get_the_content()); ?>
+  <?php var_dump(get_field('vitesse')); ?>
 
   // Affiche l'URL de la page courante
   <?php var_dump(get_permalink()); ?>
@@ -428,9 +428,9 @@ if( $posts ): ?>
 <?php endif; ?>
 ```
 
-On retrouve cet exemple sur cette page de documentation sur les boucles de Wordpress, sur la documentation  d'ACF : https://www.advancedcustomfields.com/resources/query-posts-custom-fields/
+On retrouve cet exemple sur cette page de documentation sur les boucles de WordPress, sur la documentation  d'ACF : https://www.advancedcustomfields.com/resources/query-posts-custom-fields/
 
-Ces requêtes, ou "queries", sont personnalisables, ce qui permet d'optimiser les données que l'on souhaite manipuler. Avec un éditeur de thème classique, tel qu'Elementor, Gutemberg ou Divi, il serait plus complexe de réaliser ces requêtes personnalisées.
+Ces requêtes, ou "queries", sont personnalisables, ce qui permet d'optimiser les données que l'on souhaite manipuler. Avec un éditeur de thème classique, tel qu'Elementor, Gutenberg ou Divi, il serait plus complexe de réaliser ces requêtes personnalisées.
 
 Per exemple, la requête SQL suivante nous permet de récupérer la marque d'une voiture donnés, seulement si au moins l'une des voitures est en ligne, avec le statut "publié" :
 ```php
@@ -453,12 +453,11 @@ Le résultat est ensuite stocké dans la variable `$query` est peut être exploi
     } ?>
 ```
 
-Attention, les "posts" et les "pages" sont deux notions différentes dans Wordpress ! Les pages sont utilisées pour afficher du contenu sur un site, tandis que les posts correspondent directement à du contenu mise à jour : articles, personnages, objets, kartings...
+Attention, les "posts" et les "pages" sont deux notions différentes dans WordPress ! Les pages sont utilisées pour afficher du contenu sur un site, tandis que les posts correspondent directement à du contenu mise à jour : articles, personnages, objets, kartings... Plus d'infos ici : https://wordpress.com/fr/support/article-vs-page/
 
-*N.b. : Via le raccourci `Windows + V`, vous pouvez naviguer parmis les derniers éléments copiés. Le presse-papier est à activer avant la première utilisation, ne me demandez pas pourquoi...*
+*N.b. : Via le raccourci `Windows + V`, vous pouvez naviguer parmi les derniers éléments copiés. Le presse-papier est à activer avant la première utilisation, ne me demandez pas pourquoi... La copie d'image est également possible.*
 
-![ACF Screenshot](images/presse-papier.png)
-
+![Presse papier](images/presse-papier.png)
 
 Pour retoucher une image rapidement, il existe un éditeur similaire à Photoshop, utilisable dans le navigateur web, Photopea : https://www.photopea.com/
 
@@ -469,3 +468,7 @@ Pour retoucher une image rapidement, il existe un éditeur similaire à Photosho
 - https://wordpress.org/download/
 - https://wpmarmite.com/child-theme-wordpress/
 - https://developer.wordpress.org/themes/basics/template-hierarchy/
+
+
+
+        
