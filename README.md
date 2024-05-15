@@ -455,7 +455,7 @@ Le résultat est ensuite stocké dans la variable `$query` est peut être exploi
 
 Attention, les "posts" et les "pages" sont deux notions différentes dans Wordpress ! Les pages sont utilisées pour afficher du contenu sur un site, tandis que les posts correspondent directement à du contenu mise à jour : articles, personnages, objets, kartings...
 
-*N.b. : Via le raccourci `Windows + V`, vous pouvez naviguer parmis les derniers éléments copiés. Le presse-papier est à activer avant la premièer utilisation, ne me demandez pas pourquoi...*
+*N.b. : Via le raccourci `Windows + V`, vous pouvez naviguer parmis les derniers éléments copiés. Le presse-papier est à activer avant la première utilisation, ne me demandez pas pourquoi...*
 
 ![ACF Screenshot](images/presse-papier.png)
 
