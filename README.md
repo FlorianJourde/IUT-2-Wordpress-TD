@@ -359,7 +359,7 @@ Documentations sur les "Custom Post Types" : https://wpmarmite.com/snippet/creer
 
 ### ![Notes de cours](https://img.shields.io/badge/15.5.24-Notes_de_cours-33177b?style=flat-square)
 
-Le thème `twentytwentyone-child`, disponible sur GitHub, peut être glissé à côté du dossier `twentytwentyone`, afin de réaliser une surcharge du thème parent, sans destruction de celui-ci. Il suffire ensuite de l'activer via le tableau de bord.
+Le thème `twentytwentyone-child`, disponible sur GitHub, peut être glissé à côté du dossier `twentytwentyone`, afin de réaliser une surcharge du thème parent, sans destruction de celui-ci. Il suffira ensuite de l'activer via le tableau de bord WordPress.
 
 ![Thème enfant](images/child-theme.png)
 
@@ -379,7 +379,7 @@ Parmi les méthodes les plus employées sur WordPress, on peut retrouver les sui
   // Affiche l'URL associée au post 
   <img src="<?= get_the_post_thumbnail_url() ?>" alt="">
   
-  // Affiche l'URL associée au post avec une taille définié
+  // Affiche l'URL associée au post avec une taille définie
   <img src="<?= get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') ?>" alt="">
   
   // Affiche un champ ACF, préalablement défini dans les paramètres de l'extension
@@ -394,7 +394,7 @@ Parmi les méthodes les plus employées sur WordPress, on peut retrouver les sui
 
 Pour afficher les éléments à l'aide d'ACF, une boucle doit être utilisée afin que tous les "posts" déclarés soient affichés. Il est ensuite possible de personnaliser cette requête pour formater les données comme on le souhaite : vitesse, poids, dégâts...
 
-On retrouve ce système de boucle personnalisée dans tout l'écosystème WordPress. Elle est généralement appelée `WP_Query`.
+On retrouve ce système de boucle personnalisée dans tout l'écosystème WordPress. Elle est parfois appelée `WP_Query`.
 
 ```php
 <?php 
@@ -430,9 +430,9 @@ if( $posts ): ?>
 
 On retrouve cet exemple sur cette page de documentation sur les boucles de WordPress, sur la documentation  d'ACF : https://www.advancedcustomfields.com/resources/query-posts-custom-fields/
 
-Ces requêtes, ou "queries", sont personnalisables, ce qui permet d'optimiser les données que l'on souhaite manipuler. Avec un éditeur de thème classique, tel qu'Elementor, Gutenberg ou Divi, il serait plus complexe de réaliser ces requêtes personnalisées.
+Ces requêtes, ou "queries", sont personnalisables, ce qui permet d'optimiser les données que l'on souhaite manipuler. Avec un éditeur de thème WYSIWYG, tel qu'Elementor, Gutenberg ou Divi, il serait plus complexe de réaliser ces requêtes personnalisées.
 
-Per exemple, la requête SQL suivante nous permet de récupérer la marque d'une voiture donnés, seulement si au moins l'une des voitures est en ligne, avec le statut "publié" :
+Per exemple, la requête SQL suivante nous permet de récupérer la marque d'une voiture donnée, **seulement** si au moins l'une des voitures est **en ligne**, et disposant donc statut "publié" :
 ```php
     $query = $wpdb->prepare("SELECT * FROM `wp_postmeta` INNER JOIN `wp_posts` WHERE wp_posts.id = wp_postmeta.post_id AND wp_posts.post_status = 'publish' AND `meta_key` = 'marque'");
 ```
@@ -440,7 +440,7 @@ Per exemple, la requête SQL suivante nous permet de récupérer la marque d'une
 Le résultat est ensuite stocké dans la variable `$query` est peut être exploité pour l'affichage, comme ci-suit :
 
 ```php
-    foreach ($resultsArray as $brand) {
+    foreach ($query as $brand) {
         if ($brand != 'Non-renseigne') {
 
             ?>
@@ -453,9 +453,9 @@ Le résultat est ensuite stocké dans la variable `$query` est peut être exploi
     } ?>
 ```
 
-Attention, les "posts" et les "pages" sont deux notions différentes dans WordPress ! Les pages sont utilisées pour afficher du contenu sur un site, tandis que les posts correspondent directement à du contenu mise à jour : articles, personnages, objets, kartings... Plus d'infos ici : https://wordpress.com/fr/support/article-vs-page/
+Attention, les "posts" et les "pages" sont **deux notions différentes** dans WordPress ! Les pages sont utilisées pour afficher du contenu sur un site, tandis que les posts correspondent directement à du contenu mis à jour : articles, personnages, objets, kartings... Plus d'infos ici : https://wordpress.com/fr/support/article-vs-page/
 
-*N.b. : Via le raccourci `Windows + V`, vous pouvez naviguer parmi les derniers éléments copiés. Le presse-papier est à activer avant la première utilisation, ne me demandez pas pourquoi... La copie d'image est également possible.*
+*N.b. : Via le raccourci `Windows + V`, vous pouvez naviguer parmi les derniers éléments copiés. Le presse-papier est à activer avant la première utilisation, ne me demandez pas pourquoi... La copie d'images est également possible.*
 
 ![Presse papier](images/presse-papier.png)
 
