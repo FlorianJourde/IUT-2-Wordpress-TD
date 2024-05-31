@@ -399,10 +399,10 @@ On retrouve ce système de boucle personnalisée dans tout l'écosystème WordPr
 ```php
 <?php 
 
-$posts = get_posts(array(
+$posts = get_posts([
     'posts_per_page'    => -1,
     'post_type'         => 'post'
-));
+]);
 
 if( $posts ): ?>
     
@@ -461,6 +461,62 @@ Attention, les "posts" et les "pages" sont **deux notions différentes** dans Wo
 
 Pour retoucher une image rapidement, il existe un éditeur similaire à Photoshop, utilisable dans le navigateur web, Photopea : https://www.photopea.com/
 
+### ![Notes de cours](https://img.shields.io/badge/30.5.24-Notes_de_cours-33177b?style=flat-square)
+
+Via un programme de compression ou décompression d'archive, il est possible de n'extraire que les dossiers dont nous avons besoin. Un site WordPress étant assez lourd et composé de plus de 3.000 fichiers de très petite taille, il pourra être intéressant de ne réaliser qu'une extraction partielle, en fonction de ce dont nous avons besoin.
+
+Cette extraction partielle d'une archive est d'autant plus pertinente lorsqu'on doit déplacer des fichiers sur un serveur, action qui peut être parfois chronophage.
+
+![Extraction partielle](images/partial-extract.png)
+
+Sur l'image ci-dessus, l'outil d'extraction de Windows, natif depuis les dernières versions de Windows 10, nous permet de ne glisser-déposer que les fichiers qui nous intéressent.
+
+Comme on l'a vu lors de cette initiation, les fichiers `archive.php` & `single.php` sont conçus pour réaliser les pages des articles (posts), gérés par défaut sur Wordpress.
+
+Pour créer un template dédié à un type de champ personnalisé, tels que "Voitures", "Personnages" ou "Objets", il sera nécessaire de renommer les fichiers en respectant une nomenclature imposée, afin que le CMS lie les champs personnalisé à nos modèles de pages :
+
+Dupliquer et renommer les fichiers `single.php` & `archive.php` en `single-personnages.php` & `archive-personnages.php` pour créer des pages dédiées aux personnages. Dans votre fichier `functions.php`, votre fonction de déclaration du champ personnalisé doit être similaire à ceci :
+```php
+add_action( 'init', 'custom_post_type_characters', 0 );
+function custom_post_type_characters() {
+    $labels = array(
+        'name'                => _x( 'Personnages', 'Post Type General Name'),
+        '...'                 => __( '...', '...')
+    );
+
+    $args = array(
+        'label'               => __( 'Personnages'),
+        '...'                 => __( '...')
+    );
+
+    register_post_type( 'personnages', $args );
+}
+```
+
+Le nom du fichier `single-{post_type}.php` doit être le même que celui indiqué dans la méthode `register_post_type('personnages', $args)` pour fonctionner correctement.
+
+Cette précision nous a été apportée via [cette réponse](https://stackoverflow.com/a/25533727), sur le site StackOverflow.
+
+*N.b. : Attention, méfiez-vous de la documentation de WordPress, qui peut parfois être plus troublante qu'autre chose ! On préférera généralement des exemples d'implémentation issus de StackOverflow ou de blog spécialisés, plutôt que de la documentation, qui n'est pas toujours facile à comprendre.*
+
+Si une erreur PHP est rencontrée, WordPress nous affichera un message d'erreur suite à une faille critique, par souci de sécurité et de confidentialité.
+
+![Erreur critique](images/critical-error.png)
+
+Ce message n'étant pas très explicite, il est possible pour nous de configurer WordPress de manière à ce que l'erreur soit explicitement présentée sur la page qu'il nous est impossible de charger.
+
+Pour ce faire, rendez-vous dans le ficher `wp-config.php`, à la racine de votre site, et personnalisez la méthode `WP_DEBUG`, aux alentours de la **ligne 87** du fichier, comme ci-suit :
+
+```php
+define('WP_DEBUG', true);
+```
+
+![Erreur critique](images/critical-error-2.png)
+
+De cette manière, l'erreur deviendra tout de suite beaucoup plus explicite !
+
+Attention tout de même à ne pas laisser ce filtre actif sur un site en production : l'exposition d'erreurs PHP pouvant révéler votre architecture de site, il sera plus simple pour une personne mal intentionnée de remonter la piste de votre site : base de données, identifiants, données confidentielles...
+
 ---
 
 ## ![Annexes](https://img.shields.io/badge/Annexes-383d42?style=for-the-badge)
@@ -468,7 +524,3 @@ Pour retoucher une image rapidement, il existe un éditeur similaire à Photosho
 - https://wordpress.org/download/
 - https://wpmarmite.com/child-theme-wordpress/
 - https://developer.wordpress.org/themes/basics/template-hierarchy/
-
-
-
-        
