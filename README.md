@@ -340,6 +340,8 @@ Créer un compte sur [000webhost](https://fr.000webhost.com/), le mot de passe s
 
 2. Installer le theme `twentytwentyone`
 
+3. Créer un thème enfant `twentytwentyone-child` : https://developer.wordpress.org/themes/advanced-topics/child-themes/
+
 *N.b. : Pour optimiser l'édition des fichiers via FileZilla ou WinSCP, il est possible de modifier les réglage d'associations personnalisée en ajoutant ces lignes dans les paramètres :*
 ```
 html "C:\Program Files\Microsoft VS Code\Code.exe" %f
@@ -348,8 +350,6 @@ css "C:\Program Files\Microsoft VS Code\Code.exe" %f
 ```
 
 ![FileZilla](images/filezilla-defaut.png)
-
-3. Créer un thème enfant `twentytwentyone-child` : https://developer.wordpress.org/themes/advanced-topics/child-themes/
 
 *N.b. : Pour accélérer l'apprentissage de la techno, vous êtes libre de réutiliser le code déjà produit pour la réalisation de ce exercice, directement sur [le repo GitHub](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87/tree/main/wp-content/themes/tewntytwentyone-child).*
 
@@ -367,6 +367,8 @@ Idem pour les extensions/plugins. Les trois dont nous avons besoin pour réalise
 - `advanced-custom-fields-pro`
 - `akeebabackupwp`
 - `classic-editor`
+
+---
 
 Parmi les méthodes les plus employées sur WordPress, on peut retrouver les suivantes :
 ```php
@@ -391,6 +393,8 @@ Parmi les méthodes les plus employées sur WordPress, on peut retrouver les sui
   // Affiche l'identifiant unique de la page
   <?php var_dump(get_the_ID()); ?>
 ```
+
+---
 
 Pour afficher les éléments à l'aide d'ACF, une boucle doit être utilisée afin que tous les "posts" déclarés soient affichés. Il est ensuite possible de personnaliser cette requête pour formater les données comme on le souhaite : vitesse, poids, dégâts...
 
@@ -471,6 +475,8 @@ Cette extraction partielle d'une archive est d'autant plus pertinente lorsqu'on 
 
 Sur l'image ci-dessus, l'outil d'extraction de Windows, natif depuis les dernières versions de Windows 10, nous permet de ne glisser-déposer que les fichiers qui nous intéressent.
 
+---
+
 Comme on l'a vu lors de cette initiation, les fichiers `archive.php` & `single.php` sont conçus pour réaliser les pages des articles (posts), gérés par défaut sur Wordpress.
 
 Pour créer un template dédié à un type de champ personnalisé, tels que "Voitures", "Personnages" ou "Objets", il sera nécessaire de renommer les fichiers en respectant une nomenclature imposée, afin que le CMS lie les champs personnalisé à nos modèles de pages :
@@ -499,11 +505,13 @@ Cette précision nous a été apportée via [cette réponse](https://stackoverfl
 
 *N.b. : Attention, méfiez-vous de la documentation de WordPress, qui peut parfois être plus troublante qu'autre chose ! On préférera généralement des exemples d'implémentation issus de StackOverflow ou de blog spécialisés, plutôt que de la documentation, qui n'est pas toujours facile à comprendre.*
 
+---
+
 Si une erreur PHP est rencontrée, WordPress nous affichera un message d'erreur suite à une faille critique, par souci de sécurité et de confidentialité.
 
 ![Erreur critique](images/critical-error.png)
 
-Ce message n'étant pas très explicite, il est possible pour nous de configurer WordPress de manière à ce que l'erreur soit explicitement présentée sur la page qu'il nous est impossible de charger.
+Ce message n'étant pas très explicite, il est possible pour nous de configurer WordPress de manière à ce que l'erreur soit détaillée sur la page qu'il nous est impossible de charger.
 
 Pour ce faire, rendez-vous dans le ficher `wp-config.php`, à la racine de votre site, et personnalisez la méthode `WP_DEBUG`, aux alentours de la **ligne 87** du fichier, comme ci-suit :
 
@@ -513,7 +521,7 @@ define('WP_DEBUG', true);
 
 ![Erreur critique](images/critical-error-2.png)
 
-De cette manière, l'erreur deviendra tout de suite beaucoup plus explicite !
+De cette manière, l'erreur deviendra tout de suite beaucoup plus parlante !
 
 Attention tout de même à ne pas laisser ce filtre actif sur un site en production : l'exposition d'erreurs PHP pouvant révéler votre architecture de site, il sera plus simple pour une personne mal intentionnée de remonter la piste de votre site : base de données, identifiants, données confidentielles...
 
