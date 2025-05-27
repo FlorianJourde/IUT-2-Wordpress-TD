@@ -125,7 +125,7 @@ Un thème enfant est un thème WordPress qui hérite des fonctionnalités et du 
 
 Il est important d'utiliser un thème enfant pour plusieurs raisons : cela facilite la maintenance en isolant les modifications du thème parent, cela offre une meilleure sécurité en préservant les personnalisations lors des mises à jour, et cela respecte les bonnes pratiques de développement WordPress.
 
-### ![Création d'un thème enfant ?](https://img.shields.io/badge/3.2-Création_d'un_thème_enfant-33177b?style=flat-square)
+### ![Initialisation des fichiers](https://img.shields.io/badge/3.2-Initialisation_des_fichiers-33177b?style=flat-square)
 
 1. Tout d'abord, accédez au répertoire `wp-content/themes/` de votre installation WordPress. 
 
@@ -135,9 +135,13 @@ Il est important d'utiliser un thème enfant pour plusieurs raisons : cela facil
 
 4. Toujours depuis le dépôt [IUT-3-Wordpress-Centre-auto-87](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87), glissez à cet emplacement les dossiers contenus dans le dossier `wp-content/plugins/`.
 
-5. Pour activer le thème enfant, accédez à l'administration WordPress de votre site. Allez dans l'onglet "Apparence" puis "Thèmes". Vous devriez voir votre thème enfant répertorié. Activez-le en cliquant sur le bouton "Activer".
+5. Pour activer le thème enfant, accédez à l'administration WordPress de votre site. Allez dans l'onglet "Apparence" puis "**Thèmes**". Vous devriez voir votre thème enfant répertorié. Activez-le en cliquant sur le bouton "Activer".
 
-6. Activez églament les plugins en accédant à "Extensions" depuis l'administration WordPress de votre site. Activez ensuite la case à cocher pour sélectionner toutes les extensions, dans la liste déroulante, choisissez "Activer", enfin, cliquez sur "Appliquer" pour activer toutes les extensions d'un coup.
+![Activer le theme](images/enable-theme.png)
+
+6. Activez églament les plugins en accédant à "**Extensions**" depuis l'administration WordPress de votre site. Activez ensuite la case à cocher pour sélectionner toutes les extensions, dans la liste déroulante, choisissez "Activer", enfin, cliquez sur "Appliquer" pour activer toutes les extensions d'un coup.
+
+![Activer plugins](images/enable-plugins.png)
 
 ### ![Hiérarchie des modèles](https://img.shields.io/badge/3.3-Hiérarchie_des_modèles-33177b?style=flat-square)
 
@@ -303,15 +307,3 @@ Une fois les champs personnalisés créés, associez-les à vos pages en utilisa
 ```
 
 En utilisant ces instructions, vous pouvez créer et associer des champs personnalisés avec ACF à vos pages WordPress pour une personnalisation avancée.
-
----
-
-## ![Notes](https://img.shields.io/badge/Notes-383d42?style=for-the-badge)
-
-### ![Notes de cours](https://img.shields.io/badge/21.5.25-Notes_de_cours-33177b?style=flat-square)
-
-## ![Annexes](https://img.shields.io/badge/Annexes-383d42?style=for-the-badge)
-
-- https://wordpress.org/download/
-- https://wpmarmite.com/child-theme-wordpress/
-- https://developer.wordpress.org/themes/basics/template-hierarchy/
