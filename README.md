@@ -69,15 +69,9 @@
 3. Renommez le dossier extrait en un nom facile à retenir pour votre site, par exemple "mon-site".
 4. Ouvrez votre navigateur et accédez à localhost/mon-site pour commencer l'installation de WordPress.
 
-Exemple de configuration de la base de données dans WordPress (wp-config.php) :
+Pour vous connecter à la base de données PhpMyAdmin, utilisez vos identifiants Unilim en tant que **nom de base de données**, **nom d'utilisateur**, et **mot de passe**.
 
-```php
-// Configuration de la base de données MySQL pour WordPress
-define( 'DB_NAME', 'nom_de_la_base_de_donnees' );
-define( 'DB_USER', 'nom_utilisateur' );
-define( 'DB_PASSWORD', 'mot_de_passe' );
-define( 'DB_HOST', 'localhost' );
-```
+Pour faciliter la connexion au site, vous pouvez également utiliser ces mêmes identifiants pour la connexion au tableau de bord de WordPress.
 
 <h2 id="2-advantages"> 
 
@@ -133,29 +127,17 @@ Il est important d'utiliser un thème enfant pour plusieurs raisons : cela facil
 
 ### ![Création d'un thème enfant ?](https://img.shields.io/badge/3.2-Création_d'un_thème_enfant-33177b?style=flat-square)
 
-Créez un nouveau répertoire pour votre thème enfant :
+1. Tout d'abord, accédez au répertoire `wp-content/themes/` de votre installation WordPress. 
 
-1. Tout d'abord, accédez au répertoire wp-content/themes/ de votre installation WordPress.
-Créez un nouveau répertoire pour votre thème enfant. Par exemple, nommez-le "mon-theme-enfant".
-Créez le fichier style.css :
+2. Glissez-y les dossiers `twentytwentyone` et `twentytwentyone-child`, que vous trouverez dans le dépôt GitHub [IUT-3-Wordpress-Centre-auto-87](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87).
 
-2. Dans le répertoire du thème enfant que vous venez de créer, créez un fichier style.css.
-Ajoutez l'en-tête du thème dans ce fichier. Voici un exemple d'en-tête :
+3. Dans le répertoire `wp-content/plugins/`, supprimer les plugins par défaut (Akismet, Hello Dolly..) qu sont de simples "Hello world".
 
-```css
-/*
- Theme Name:     Mon Thème Enfant
- Description:    Thème enfant pour le thème parent Twenty Twenty-One
- Version:        1.0
- Author:         Votre Nom
- Author URI:     Votre site web
- Template:       twentytwentyone
- */
-```
+4. Toujours depuis le dépôt [IUT-3-Wordpress-Centre-auto-87](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87), glissez à cet emplacement les dossiers contenus dans le dossier `wp-content/plugins/`.
 
-3. Assurez-vous que le nom du thème parent (Template) correspond exactement au répertoire du thème parent tel qu'il est enregistré dans le répertoire `wp-content/themes/`.
+5. Pour activer le thème enfant, accédez à l'administration WordPress de votre site. Allez dans l'onglet "Apparence" puis "Thèmes". Vous devriez voir votre thème enfant répertorié. Activez-le en cliquant sur le bouton "Activer".
 
-4. Pour activer le thème enfant, accédez à l'administration WordPress de votre site. Allez dans l'onglet "Apparence" puis "Thèmes". Vous devriez voir votre thème enfant répertorié. Activez-le en cliquant sur le bouton "Activer".
+6. Activez églament les plugins en accédant à "Extensions" depuis l'administration WordPress de votre site. Activez ensuite la case à cocher pour sélectionner toutes les extensions, dans la liste déroulante, choisissez "Activer", enfin, cliquez sur "Appliquer" pour activer toutes les extensions d'un coup.
 
 ### ![Hiérarchie des modèles](https://img.shields.io/badge/3.3-Hiérarchie_des_modèles-33177b?style=flat-square)
 
@@ -326,7 +308,7 @@ En utilisant ces instructions, vous pouvez créer et associer des champs personn
 
 ## ![Notes](https://img.shields.io/badge/Notes-383d42?style=for-the-badge)
 
-### ![Notes de cours](https://img.shields.io/badge/13.5.25-Notes_de_cours-33177b?style=flat-square)
+### ![Notes de cours](https://img.shields.io/badge/21.5.25-Notes_de_cours-33177b?style=flat-square)
 
 ## ![Annexes](https://img.shields.io/badge/Annexes-383d42?style=for-the-badge)
 
