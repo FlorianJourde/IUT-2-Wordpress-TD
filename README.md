@@ -76,7 +76,7 @@ Dans la continuité des livrables et visuels déjà produits, l'objectif sera ma
 1. Téléchargez la dernière version de WordPress depuis le site officiel : https://wordpress.org/download/
 2. Extrayez le fichier ZIP dans le répertoire www de votre installation Wamp (habituellement C:\wamp64\www).
 3. Renommez le dossier extrait en un nom facile à retenir pour votre site, par exemple "rockenseine".
-4. Ouvrez votre navigateur et accédez à localhost/rockenseine pour commencer l'installation de WordPress.
+4. Ouvrez votre navigateur et accédez à `rockenseine.localhost` pour commencer l'installation de WordPress.
 
 Pour vous connecter à la base de données PhpMyAdmin, utilisez vos identifiants Unilim suivants :
 
@@ -86,7 +86,7 @@ Pour vous connecter à la base de données PhpMyAdmin, utilisez vos identifiants
 
 Pour faciliter la connexion au site, vous pouvez également utiliser ces mêmes identifiants pour la connexion au tableau de bord de WordPress. Étant uniquement disponibles en local, il ne représentent pas, ici, un enjeu de sécurité important.
 
-*Notes : Sauvegardez bien votre base de données initiales avant mise en place d'un site WordPress afin de ne pas perdre vos tables personnelles !*
+*Notes : Sauvegardez bien votre base de données initiale avant mise en place d'un site WordPress afin de conserver une copie de vos tables personnelles !*
 
 <h2 id="3-content-management"> 
 
@@ -96,17 +96,85 @@ Pour faciliter la connexion au site, vous pouvez également utiliser ces mêmes 
 
 ### ![Gestion du contenu simplifiée](https://img.shields.io/badge/3.1-Gestion_du_contenu_simplifiée-33177b?style=flat-square)
 
-WordPress offre une interface conviviale pour gérer le contenu du site, permettant même aux utilisateurs non techniques de mettre à jour facilement le contenu des pages, des articles de blog et d'autres éléments.
+WordPress offre une interface aboutie pour gérer le contenu du site, permettant aux utilisateurs techniques ou non de mettre à jour facilement le contenu des pages, des articles de blog et d'autres éléments.
 
-Exemple d'affichage du contenu d'un article dans WordPress :
+Voici quelques exemples, essentiels à connaître quand on découvre WordPress.
 
 ```php
 <?php 
-if ( have_posts() ) : 
-    while ( have_posts() ) : the_post(); 
-        the_content(); 
-    endwhile; 
-endif; 
+/**
+ * 1. LA BOUCLE WORDPRESS (The Loop)
+ * Cœur de WordPress : parcourt et affiche les posts/pages
+ */
+if (have_posts()) :              // S'il y a du contenu à afficher
+    while (have_posts()) :       // Tant qu'il reste des posts
+        the_post();              // Prépare les données du post courant
+        
+        the_title('<h2>', '</h2>');  // Titre du post
+        the_content();               // Contenu du post
+        the_excerpt();               // Extrait/résumé
+        the_post_thumbnail();        // Image mise en avant
+        the_date();                  // Date de publication
+        the_author();                // Auteur
+        
+    endwhile;
+else :
+    echo '<p>Aucun contenu trouvé.</p>';
+endif;
+?>
+```
+
+```php
+<?php
+/**
+ * 2. REQUÊTE PERSONNALISÉE (WP_Query)
+ * Récupérer des posts selon des critères spécifiques
+ */
+$args = [
+    'post_type'      => 'voiture',      // Type de contenu (post, page, ou custom)
+    'posts_per_page' => 6,              // Nombre de résultats
+    'orderby'        => 'date',         // Tri par date
+    'order'          => 'DESC',         // Du plus récent au plus ancien
+    'meta_key'       => 'prix',         // Champ personnalisé
+    'meta_value'     => 10000,          // Valeur à filtrer
+    'meta_compare'   => '<=',           // Opérateur (<=, >=, =, LIKE...)
+];
+
+$query = new WP_Query($args);
+
+if ($query->have_posts()) :
+    while ($query->have_posts()) : $query->the_post();
+        the_title();
+        echo '<p>Prix : ' . get_field('prix') . ' €</p>';
+    endwhile;
+    wp_reset_postdata();  // Important : réinitialise la requête globale
+endif;
+?>
+```
+
+```php
+<?php
+/**
+ * 3. STRUCTURE D'UN THÈME - functions.php
+ * Configuration et fonctionnalités du thème
+ */
+
+// Activer les fonctionnalités du thème
+function mon_theme_setup() {
+    add_theme_support('title-tag');           // Balise <title> automatique
+    add_theme_support('post-thumbnails');     // Images mises en avant
+    add_theme_support('custom-logo');         // Logo personnalisable
+    
+    register_nav_menus(['primary' => 'Menu principal']);
+}
+add_action('after_setup_theme', 'mon_theme_setup');
+
+// Charger CSS et JS proprement
+function mon_theme_scripts() {
+    wp_enqueue_style('main-css', get_stylesheet_uri());
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js', [], '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'mon_theme_scripts');
 ?>
 ```
 
@@ -116,7 +184,7 @@ Il est important de comprendre que les thèmes WordPress sur un système de "fal
 
 Ci-après, vous trouverez un schéma permettant de visualiser comment fonctionne ce système.
 
-![Wordpress template hierarchy](images/template-hierarchy.webp)
+![WordPress template hierarchy](images/template-hierarchy.webp)
 
 Vous retrouverez ce schéma, ainsi que des informations annexes, sur cette page : https://developer.wordpress.org/themes/basics/template-hierarchy/.
 
@@ -137,7 +205,7 @@ Il est important d'utiliser un thème enfant pour plusieurs raisons : cela facil
 
 ### ![Initialisation des fichiers](https://img.shields.io/badge/4.2-Initialisation_des_fichiers-33177b?style=flat-square)
 
-1. Téléchargez l'archive depuis le dépôt GitHub suivant : https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87/
+1. Téléchargez l'archive depuis le dépôt GitHub suivant : https://github.com/FlorianJourde/IUT-3-WordPress-Centre-auto-87/
 
 2. Accédez au répertoire `wp-content/themes/` de votre installation WordPress.
 
@@ -149,7 +217,7 @@ Il est important d'utiliser un thème enfant pour plusieurs raisons : cela facil
 
 3. Dans le répertoire `wp-content/plugins/`, supprimer les plugins par défaut (Akismet, Hello Dolly..) qui sont de simples "Hello world".
 
-4. Toujours depuis le dépôt [IUT-3-Wordpress-Centre-auto-87](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87), glissez dans vos fichiers locaux les dossiers contenus dans le dossier `wp-content/plugins/`. Étant donné le nombre de fichiers qui composent les plugins WordPress, cela peut prendre un certain temps.
+4. Toujours depuis le dépôt [IUT-3-WordPress-Centre-auto-87](https://github.com/FlorianJourde/IUT-3-WordPress-Centre-auto-87), glissez dans vos fichiers locaux les dossiers contenus dans le dossier `wp-content/plugins/`. Étant donné le nombre de fichiers qui composent les plugins WordPress, cela peut prendre un certain temps.
 
 5. Pour activer le thème enfant, accédez à l'administration WordPress de votre site. Allez dans l'onglet "Apparence" puis "**Thèmes**". Vous devriez voir votre thème enfant répertorié. Activez-le en cliquant sur le bouton "Activer".
 
