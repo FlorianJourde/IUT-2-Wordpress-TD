@@ -2,84 +2,99 @@
 
 ## ![Informations](https://img.shields.io/badge/Informations-383d42?style=for-the-badge)
 
-**Date** : Mai 2025  
+**Date** : Mai 2026  
 **Session** : MMI 1  
 **Intervenant** : Florian Jourde  
-**Contact** : [jourdeflorian@gmail.com](www.jourdeflorian@gmail.com)  
+**Contact** : [jourdeflorian@gmail.com](www.jourdeflorian@gmail.com)
 
 ---
 
 ## ![Sommaire](https://img.shields.io/badge/Sommaire-383d42?style=for-the-badge)
+
 <ol>
-  <li><a href="#1-installation">Installation de WordPress avec Wamp</a>
+  <li><a href="#1-objectif">Objectif du TD</a>
+    <ol>
+      <li>Initiation à WordPress</li>
+    </ol>
+  </li>
+  <li><a href="#2-installation">Installation de WordPress avec Wamp</a>
     <ol>
       <li>Installation de WordPress</li>
     </ol>
   </li>
-  <li><a href="#2-advantages">Les avantages de WordPress</a>
+  <li><a href="#3-content-management">Gestion de contenus</a>
     <ol>
       <li>Gestion du contenu simplifiée</li>
-      <li>Fonctionnalités intégrées</li>
-      <li>Support et communauté</li>
-    </ol>
-  </li>
-  <li><a href="#3-child-theme">Création de thèmes enfants</a>
-    <ol>
-      <li>Qu'est-ce qu'un thème enfant ?</li>
-      <li>Création d'un thème enfant</li>
       <li>Hiérarchie des modèles</li>
     </ol>
   </li>
-  <li><a href="#4-page-creation">Création et personnalisation de pages</a>
+  <li><a href="#4-child-theme">Création de thèmes enfants</a>
+    <ol>
+      <li>Qu'est-ce qu'un thème enfant ?</li>
+      <li>Initialisation des fichiers</li>
+    </ol>
+  </li>
+  <li><a href="#5-page-creation">Création et personnalisation de pages</a>
     <ol>
       <li>Personnalisation des pages</li>
-      <li>Ajout de contenu statique et dynamique aux pages</li>
+      <li>Modèles de pages personnalisés</li>
     </ol>
   </li>
-  <li><a href="#5-custom-pages">Création de modèles de page personnalisés</a>
+  <li><a href="#6-acf">Configuration du plugin ACF</a>
     <ol>
-      <li>Explication des modèles de page personnalisés</li>
-      <li>Utilité des modèles de page personnalisés</li>
-      <li>Création d'un modèle de page personnalisé</li>
-    </ol>
-  </li>
-  <li><a href="#6-acf">Installation et configuration du plugin ACF</a>
-    <ol>
-      <li>Création de pages avec ACF</li>
-      <li>Installation du plugin ACF</li>
-      <li>Configuration de ACF</li>
+      <li>À quoi sert ACF</li>
+      <li>Configuration d'ACF</li>
       <li>Création de champs personnalisés</li>
-      <li>Liaison des champs ACF aux pages</li>
     </ol>
   </li>
 </ol>
 
 ---
 
-<h2 id="1-installation"> 
+<h2 id="1-objectif"> 
 
-![Installation de WordPress avec Wamp](https://img.shields.io/badge/1-Installation_de_WordPress_avec_Wamp-431ea1?style=for-the-badge)
+![Objectif du TD](https://img.shields.io/badge/1-Objectif_du_TD-431ea1?style=for-the-badge)
 
 </h2>
 
-### ![Installation de WordPress](https://img.shields.io/badge/1.1-Installation_de_WordPress-33177b?style=flat-square)
+### ![Initiation à WordPress](https://img.shields.io/badge/1.1-Initiation_à_WordPress-33177b?style=flat-square)
 
-1. Téléchargez la dernière version de WordPress depuis le site officiel.
+L'exercice de création d'un site via le CMS WordPress s'inscrit dans le cadre de la SAÉ 202. Voici le site pour lequel il vous a été de demander de réaliser la communication :
+
+- https://www.rockenseine.com/
+
+Dans la continuité des livrables et visuels déjà produits, l'objectif sera maintenant d'intégrer le site en s'épaulant des fonctionnalités fournies par WordPress.
+
+<h2 id="2-installation"> 
+
+![Installation de WordPress avec Wamp](https://img.shields.io/badge/2-Installation_de_WordPress_avec_Wamp-431ea1?style=for-the-badge)
+
+</h2>
+
+### ![Installation de WordPress](https://img.shields.io/badge/2.1-Installation_de_WordPress-33177b?style=flat-square)
+
+1. Téléchargez la dernière version de WordPress depuis le site officiel : https://wordpress.org/download/
 2. Extrayez le fichier ZIP dans le répertoire www de votre installation Wamp (habituellement C:\wamp64\www).
-3. Renommez le dossier extrait en un nom facile à retenir pour votre site, par exemple "mon-site".
-4. Ouvrez votre navigateur et accédez à localhost/mon-site pour commencer l'installation de WordPress.
+3. Renommez le dossier extrait en un nom facile à retenir pour votre site, par exemple "rockenseine".
+4. Ouvrez votre navigateur et accédez à localhost/rockenseine pour commencer l'installation de WordPress.
 
-Pour vous connecter à la base de données PhpMyAdmin, utilisez vos identifiants Unilim en tant que **nom de base de données**, **nom d'utilisateur**, et **mot de passe**.
+Pour vous connecter à la base de données PhpMyAdmin, utilisez vos identifiants Unilim suivants :
 
-Pour faciliter la connexion au site, vous pouvez également utiliser ces mêmes identifiants pour la connexion au tableau de bord de WordPress.
+- **nom de base de données**
+- **nom d'utilisateur**
+- **mot de passe**.
 
-<h2 id="2-advantages"> 
+Pour faciliter la connexion au site, vous pouvez également utiliser ces mêmes identifiants pour la connexion au tableau de bord de WordPress. Étant uniquement disponibles en local, il ne représentent pas, ici, un enjeu de sécurité important.
 
-![Les avantages de WordPress](https://img.shields.io/badge/2-Les_avantages_de_WordPress-431ea1?style=for-the-badge)
+*Notes : Sauvegardez bien votre base de données initiales avant mise en place d'un site WordPress afin de ne pas perdre vos tables personnelles !*
+
+<h2 id="3-content-management"> 
+
+![Gestion de contenus](https://img.shields.io/badge/3-Gestion_de_contenus-431ea1?style=for-the-badge)
 
 </h2>
 
-### ![Gestion du contenu simplifiée](https://img.shields.io/badge/2.1-Gestion_du_contenu_simplifiée-33177b?style=flat-square)
+### ![Gestion du contenu simplifiée](https://img.shields.io/badge/3.1-Gestion_du_contenu_simplifiée-33177b?style=flat-square)
 
 WordPress offre une interface conviviale pour gérer le contenu du site, permettant même aux utilisateurs non techniques de mettre à jour facilement le contenu des pages, des articles de blog et d'autres éléments.
 
@@ -95,161 +110,186 @@ endif;
 ?>
 ```
 
-### ![Fonctionnalités intégrées](https://img.shields.io/badge/2.2-Fonctionnalités_intégrées-33177b?style=flat-square)
+### ![Hiérarchie des modèles](https://img.shields.io/badge/3.2-Hiérarchie_des_modèles-33177b?style=flat-square)
 
-WordPress offre de nombreuses fonctionnalités intégrées telles que la gestion des utilisateurs, la gestion des commentaires, la gestion des médias, etc., ce qui réduit le besoin de développement personnalisé pour ces fonctionnalités de base.
+Il est important de comprendre que les thèmes WordPress sur un système de "fallback" de page : de gauche à droite, la page affichée si la précédente n'est pas trouvée par le système.
 
-Exemple d'affichage du contenu de l'utilisateur connecté dans WordPress :
-
-```php
-<?php echo 'Bienvenue, ' . $current_user->user_login . '!'; ?>
-```
-
-### ![Support et communauté](https://img.shields.io/badge/2.3-Support_et_communauté-33177b?style=flat-square)
-
-WordPress bénéficie d'une communauté active de développeurs et d'utilisateurs qui partagent des conseils, des tutoriels et des ressources, offrant un soutien précieux aux personnes travaillant avec la plateforme.
-
-Conclusion : WordPress offre de nombreux avantages par rapport au développement "à la main" en PHP, notamment une gestion simplifiée du contenu, une grande variété de plugins et de thèmes, un développement rapide et des fonctionnalités intégrées, ce qui en fait un choix puissant pour la création de sites Web de toutes tailles et de tous types.
-
-<h2 id="3-child-theme"> 
-
-![Création de thèmes enfants](https://img.shields.io/badge/3-Création_de_thèmes_enfants-431ea1?style=for-the-badge)
-
-</h2>
-
-**Objectif** : Comprendre l'importance et le processus de création de thèmes enfants dans WordPress, ainsi que la personnalisation de ces thèmes enfants en ajoutant des styles CSS et des fonctionnalités via le fichier functions.php.
-
-### ![Qu'est ce qu'un thème enfant ?](https://img.shields.io/badge/3.1-Qu'est_ce_qu'un_thème_enfant-33177b?style=flat-square)
-
-Un thème enfant est un thème WordPress qui hérite des fonctionnalités et du style d'un autre thème parent, appelé le thème parent. Cela permet de personnaliser et d'étendre les fonctionnalités d'un thème parent sans modifier directement ses fichiers.
-
-Il est important d'utiliser un thème enfant pour plusieurs raisons : cela facilite la maintenance en isolant les modifications du thème parent, cela offre une meilleure sécurité en préservant les personnalisations lors des mises à jour, et cela respecte les bonnes pratiques de développement WordPress.
-
-### ![Initialisation des fichiers](https://img.shields.io/badge/3.2-Initialisation_des_fichiers-33177b?style=flat-square)
-
-1. Tout d'abord, accédez au répertoire `wp-content/themes/` de votre installation WordPress. 
-
-2. Glissez-y les dossiers `twentytwentyone` et `twentytwentyone-child`, que vous trouverez dans le dépôt GitHub [IUT-3-Wordpress-Centre-auto-87](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87).
-
-3. Dans le répertoire `wp-content/plugins/`, supprimer les plugins par défaut (Akismet, Hello Dolly..) qu sont de simples "Hello world".
-
-4. Toujours depuis le dépôt [IUT-3-Wordpress-Centre-auto-87](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87), glissez à cet emplacement les dossiers contenus dans le dossier `wp-content/plugins/`.
-
-5. Pour activer le thème enfant, accédez à l'administration WordPress de votre site. Allez dans l'onglet "Apparence" puis "**Thèmes**". Vous devriez voir votre thème enfant répertorié. Activez-le en cliquant sur le bouton "Activer".
-
-![Activer le theme](images/enable-theme.png)
-
-6. Activez églament les plugins en accédant à "**Extensions**" depuis l'administration WordPress de votre site. Activez ensuite la case à cocher pour sélectionner toutes les extensions, dans la liste déroulante, choisissez "Activer", enfin, cliquez sur "Appliquer" pour activer toutes les extensions d'un coup.
-
-![Activer plugins](images/enable-plugins.png)
-
-### ![Hiérarchie des modèles](https://img.shields.io/badge/3.3-Hiérarchie_des_modèles-33177b?style=flat-square)
-
-Il est important de comprendre que les thèmes Wordpress fonctionnent sur un principe de hiérarchie, ainsi que de surcharge. Ci-après, vous trouverez un schéma permettant de visualiser comment fonctionne ce principe. 
+Ci-après, vous trouverez un schéma permettant de visualiser comment fonctionne ce système.
 
 ![Wordpress template hierarchy](images/template-hierarchy.webp)
 
 Vous retrouverez ce schéma, ainsi que des informations annexes, sur cette page : https://developer.wordpress.org/themes/basics/template-hierarchy/.
 
-<h2 id="4-page-creation"> 
 
-![Création et personnalisation de pages](https://img.shields.io/badge/4-Création_et_personnalisation_de_pages-431ea1?style=for-the-badge)
+<h2 id="4-child-theme"> 
 
-</h2>
-
-Dans cette section, nous allons explorer la création et la personnalisation de pages dans WordPress, en utilisant les fonctionnalités puissantes de l'éditeur de blocs classique, ainsi que l'intégration des champs personnalisés avec Advanced Custom Fields (ACF) pour une personnalisation avancée.
-
-### ![Personnalisation des pages](https://img.shields.io/badge/4.1-Personnalisation_des_pages-33177b?style=flat-square)
-
-L'éditeur "Classic Editor" vous permet d'ajouter facilement du texte, des images, des vidéos et d'autres éléments à vos pages. Utilisez les boutons de mise en forme pour styliser votre contenu selon vos besoins. Vous pouvez également ajouter des fonctionnalités supplémentaires à vos pages en utilisant des plugins compatibles avec l'éditeur "Classic Editor".
-
-### ![Ajout de contenu statique et dynamique aux pages](https://img.shields.io/badge/4.2-Ajout_de_contenu_statique_et_dynamique_aux_pages-33177b?style=flat-square)
-
-En plus du contenu statique, vous pouvez intégrer du contenu dynamique à vos pages en utilisant des shortcodes ou des widgets. Par exemple, vous pouvez insérer un shortcode pour afficher une galerie d'images ou un widget pour afficher les derniers articles de votre blog sur une page.
-
-
-<h2 id="5-custom-pages"> 
-
-![Création de modèles de page personnalisés](https://img.shields.io/badge/5-Création_de_modèles_de_page_personnalisés-431ea1?style=for-the-badge)
+![Création de thèmes enfants](https://img.shields.io/badge/4-Création_de_thèmes_enfants-431ea1?style=for-the-badge)
 
 </h2>
 
-### ![Explication des modèles de page personnalisés](https://img.shields.io/badge/5.1-Explication_des_modèles_de_page_personnalisés-33177b?style=flat-square)
+### ![Qu'est ce qu'un thème enfant ?](https://img.shields.io/badge/4.1-Qu'est_ce_qu'un_thème_enfant-33177b?style=flat-square)
 
-Les modèles de page personnalisés sont des fichiers de modèle spéciaux dans WordPress qui permettent de définir une mise en page unique et spécifique pour une page donnée ou un groupe de pages. Ils offrent une flexibilité totale dans la conception de votre site Web en vous permettant de créer des mises en page sur mesure pour différents types de contenu.
+WordPress offre de nombreuses fonctionnalités intégrées telles que la gestion des utilisateurs, la gestion des commentaires, la gestion des médias, etc., ce qui réduit le besoin de développement personnalisé pour ces fonctionnalités de base.
 
-### ![Utilité des modèles de page personnalisés](https://img.shields.io/badge/5.2-Utilité_des_modèles_de_page_personnalisés-33177b?style=flat-square)
+Un thème enfant est un thème WordPress qui hérite des fonctionnalités et du style d'un autre thème parent, appelé le thème parent. Cela permet de personnaliser et d'étendre les fonctionnalités d'un thème parent sans modifier directement ses fichiers.
 
-Les modèles de page personnalisés sont extrêmement utiles dans de nombreuses situations, notamment :
+Il est important d'utiliser un thème enfant pour plusieurs raisons : cela facilite la maintenance en isolant les modifications du thème parent, cela offre une meilleure sécurité en préservant les personnalisations lors des mises à jour, et cela respecte les bonnes pratiques de développement WordPress.
 
-- Création de pages d'accueil personnalisées avec des mises en page uniques et des sections spécifiques.
-- Mise en page différenciée pour les pages d'archives, les pages de catégories ou les pages de recherche.
-- Personnalisation avancée des pages individuelles pour des fonctionnalités spécifiques telles que des portfolios, des témoignages, des pages de contact, etc.
+### ![Initialisation des fichiers](https://img.shields.io/badge/4.2-Initialisation_des_fichiers-33177b?style=flat-square)
 
-### ![Création d'un modèle de page personnalisé](https://img.shields.io/badge/5.3-Création_d'un_modèle_de_page_personnalisé-33177b?style=flat-square)
+1. Téléchargez l'archive depuis le dépôt GitHub suivant : https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87/
 
-Pour créer un modèle de page personnalisé dans WordPress, suivez ces étapes :
+2. Accédez au répertoire `wp-content/themes/` de votre installation WordPress.
 
-1. Identifiez le type de modèle de page dont vous avez besoin.
-2. Créez un nouveau fichier de modèle dans le répertoire de votre thème WordPress.
-3. Utilisez des balises spéciales pour indiquer à WordPress que ce fichier est un modèle de page personnalisé.
-4. Définissez la mise en page et le contenu de votre modèle en utilisant des balises PHP, des boucles WordPress et des fonctions de thème.
+2. Glissez-y les dossiers `twentytwentyone` et `twentytwentyone-child`, depuis l'archive précédemment téléchargée.
 
-Voici un exemple de code pour créer un modèle de page personnalisé nommé "template-custom.php" :
+*Notes : La décompression d'une archive étant une action parfois chronophage, il est possible de n'extraire que les dossiers dont nous avons besoin. Pour réaliser une extraction partielle, il suffit de glisser-déposer seulement les dossiers dont nous avons besoin dans le cadre de notre travail.*
+
+![Extraction partielle](images/partial-extract.png)
+
+3. Dans le répertoire `wp-content/plugins/`, supprimer les plugins par défaut (Akismet, Hello Dolly..) qui sont de simples "Hello world".
+
+4. Toujours depuis le dépôt [IUT-3-Wordpress-Centre-auto-87](https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87), glissez dans vos fichiers locaux les dossiers contenus dans le dossier `wp-content/plugins/`. Étant donné le nombre de fichiers qui composent les plugins WordPress, cela peut prendre un certain temps.
+
+5. Pour activer le thème enfant, accédez à l'administration WordPress de votre site. Allez dans l'onglet "Apparence" puis "**Thèmes**". Vous devriez voir votre thème enfant répertorié. Activez-le en cliquant sur le bouton "Activer".
+
+![Activer le theme](images/enable-theme.png)
+
+6. Activez également les plugins en accédant à "**Extensions**" depuis l'administration WordPress de votre site. Activez ensuite la case à cocher pour sélectionner toutes les extensions, dans la liste déroulante, choisissez "Activer", enfin, cliquez sur "Appliquer" pour activer toutes les extensions d'un coup.
+
+![Activer plugins](images/enable-plugins.png)
+
+7. À partir d'ici, vous êtes en capacité d'ajuster les fichiers CSS, HTML, JavaScript ou PHP qui vous intéressent pour réaliser l'intégration de votre propre site web. Il vous est donc possible d'intégrer la maquette que vous avez préconçue en adaptant les fichiers CSS
+
+*Notes : Pour optimiser l'édition des fichiers via FileZilla ou WinSCP, il est possible de modifier les réglages d'associations personnalisés en ajoutant ces lignes dans les paramètres :*
+
+- *FileZilla > Paramètres > Edition des fichiers > Association par type de fichiers*
+
+```
+css "C:\Program Files\Microsoft VS Code\Code.exe" %f
+php "C:\Program Files\Microsoft VS Code\Code.exe" %f
+html "C:\Program Files\Microsoft VS Code\Code.exe" %f
+js "C:\Program Files\Microsoft VS Code\Code.exe" %f
+```
+
+![FileZilla](images/filezilla-defaut.png)
+
+<h2 id="5-page-creation"> 
+
+![Création et personnalisation de pages](https://img.shields.io/badge/5-Création_et_personnalisation_de_pages-431ea1?style=for-the-badge)
+
+</h2>
+
+### ![Personnalisation des pages](https://img.shields.io/badge/5.1-Personnalisation_des_pages-33177b?style=flat-square)
+
+L'utilisation de l'extension **"Classic Editor"** est requise pour la réalisation de cet exercice.
+
+Cet éditeur est progressivement remplacé par l'éditeur **"Gutenberg"** depuis 2020, mais l'utilisation de l'éditeur initial de WordPress permet de bien cerner la plus value de l'utilisation des "champs personnalisés" (ACF), dans le cas ou un client non-technique à la main sur le site final : vous vous chargez de la structure, le client alimente le contenu.
+
+L'éditeur Gutenberg laisse plus de liberté quant à la mise en page du site, ce qui peut être souhaitable ou non selon les appétences en développement du futur modérateur.
+
+### ![Modèles de page personnalisés](https://img.shields.io/badge/5.2-Modèles_de_page_personnalisés-33177b?style=flat-square)
+
+Les modèles de page personnalisés sont des fichiers permettant de définir des mises en page uniques pour certaines pages. Ils complètent la hiérarchie standard de WordPress :
+
+- `single.php` pour un article ;
+- `archive.php` pour les listes.
+
+Ils offrent un contrôle total sur des pages spécifiques : page d'accueil sur mesure, portfolio, page contact avec formulaire, landing pages marketing, etc.
 
 ```php
 <?php
-
-/*
-Template Name: Contact
-*/
+/**
+ * Template pour afficher un article individuel (single post)
+ * Fichier : single.php dans un thème enfant WordPress
+ */
 
 get_header();
-
 ?>
 
-<!-- Contenu de votre modèle de page personnalisé -->
+<section class="single-container">
+    <div class="wrapper">
 
-<?php
+        <!-- 1. AFFICHAGE CONDITIONNEL D'IMAGES -->
+        <?php if (get_field('images')) : // Champ ACF (Advanced Custom Fields) ?>
+            <div class="swiper">
+                <?php foreach (get_field('images') as $image) : ?>
+                    <div class="swiper-slide">
+                        <img src="<?= $image; ?>" alt="">
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php else : ?>
+            <!-- Image par défaut si pas de galerie -->
+            <?php 
+            $thumbnail = get_the_post_thumbnail_url(get_the_ID()) 
+                ?: get_home_url() . '/wp-content/themes/mon-theme/default.png';
+            ?>
+            <img src="<?= $thumbnail ?>" alt="">
+        <?php endif; ?>
 
-get_footer();
+        <!-- 2. AFFICHAGE DE CHAMPS PERSONNALISÉS (ACF) -->
+        <div class="description">
+            <h2>Description</h2>
+            <p><?= get_field('description'); ?></p>
+        </div>
 
-?>
+        <!-- 3. AFFICHAGE CONDITIONNEL D'UN CHAMP -->
+        <?php if (get_field('prix')) : ?>
+            <div class="row">
+                <h3>Prix</h3>
+                <p><?= number_format(get_field('prix'), 0, ".", " "); ?> €</p>
+            </div>
+        <?php endif; ?>
+
+        <!-- 4. FONCTIONS WORDPRESS NATIVES -->
+        <div class="infos">
+            <p>Date : <?= get_the_date(); ?></p>
+            <p>Vendeur : <?= get_bloginfo('name'); ?></p>
+            
+            <!-- Logo du site -->
+            <img src="<?= esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full')[0]); ?>" alt="Logo">
+        </div>
+
+        <!-- 5. TRANSFORMATION DE TEXTE -->
+        <?php
+        $accents = ['é' => 'e', 'è' => 'e', 'ê' => 'e', 'à' => 'a', 'ù' => 'u'];
+        $marque = strtr(get_field('marque'), $accents);
+        $logo_url = get_home_url() . '/assets/brands/' . strtolower($marque) . '-logo.png';
+        ?>
+        <img src="<?= $logo_url; ?>" alt="<?= get_field('marque'); ?>">
+
+    </div>
+</section>
+
+<!-- 6. INCLUSION DE TEMPLATES PARTIELS -->
+<?php get_template_part('template-parts/content/content-portfolio'); ?>
+<?php include('template-parts/partials/action-section.php'); ?>
+
+<?php get_footer();
 ```
 
-Dans cet exemple, le nom du modèle est défini par la balise `Template Name`. Vous pouvez ensuite personnaliser la mise en page et le contenu de votre modèle comme vous le souhaitez entre les balises `get_header()` et `get_footer()`.
-
-Les modèles de page personnalisés offrent une flexibilité inégalée dans la conception de sites Web WordPress en permettant de créer des mises en page sur mesure pour différents types de contenu. En comprenant leur utilité et en maîtrisant leur création, vous pouvez concevoir des sites Web uniques et fonctionnels qui répondent parfaitement aux besoins de vos clients.
-
+Dans cet exemple, vous pouvez ensuite personnaliser la mise en page et le contenu de votre modèle comme vous le souhaitez entre les balises `get_header()` et `get_footer()`.
 
 <h2 id="6-acf"> 
 
-![Installation et configuration du plugin ACF](https://img.shields.io/badge/6-Installation_et_configuration_du_plugin_ACF-431ea1?style=for-the-badge)
+![Configuration du plugin ACF](https://img.shields.io/badge/6-Installation_et_configuration_du_plugin_ACF-431ea1?style=for-the-badge)
 
 </h2>
 
-Le plugin Advanced Custom Fields (ACF) est un outil puissant qui permet d'ajouter facilement des champs personnalisés à vos pages, articles et autres types de contenus dans WordPress. Dans cette section, nous allons explorer comment installer et configurer ACF, ainsi que la création et la liaison des champs personnalisés aux pages précédemment créées.
+### ![À quoi sert ACF ?](https://img.shields.io/badge/6.1-A_quoi_sert_ACF-33177b?style=flat-square)
 
-### ![Création de pages avec ACF](https://img.shields.io/badge/6.1-Création_de_pages_avec_ACF-33177b?style=flat-square)
+Le plugin Advanced Custom Fields (ACF) est un outil puissant qui permet d'ajouter facilement des champs personnalisés à vos pages, articles et autres types de contenus dans WordPress.
 
-Pour une personnalisation avancée, intégrez Advanced Custom Fields (ACF) dans vos pages. Créez des champs personnalisés pour permettre au client de saisir des informations spécifiques pour chaque page, telles qu'un champ de texte pour un titre alternatif, un champ d'image pour une bannière personnalisée, ou même des champs de relation pour lier des pages entre elles.
+C'est un outil particulièrement adapté aux personnes à qui sont destinées la modération du site, sans pour autant avoir les compétences techniques.
 
-Avec ACF, vous pouvez créer des pages qui répondent parfaitement aux besoins uniques de chaque projet, en offrant une expérience utilisateur sur mesure.
+### ![Configuration de ACF](https://img.shields.io/badge/6.2-Configuration_d'ACF-33177b?style=flat-square)
 
-En maîtrisant la création et la personnalisation de pages dans WordPress à travers l'éditeur "Classic Editor", ainsi que l'intégration des fonctionnalités avancées d'ACF, vous êtes prêt à construire des sites Web qui captivent l'attention et offrent une expérience utilisateur exceptionnelle.
+Une fois le plugin activé, vous pouvez accéder à ses paramètres en cliquant sur "Custom Fields" dans le menu de l'administration WordPress.
 
-### ![Installation du plugin ACF](https://img.shields.io/badge/6.2-Installation_du_plugin_ACF-33177b?style=flat-square)
+Là, vous pouvez configurer différentes options selon vos besoins, telles que les autorisations d'affichage des champs personnalisés et les paramètres de mise en cache.
 
-1. Accédez à l'administration de votre site WordPress.
-2. Naviguez jusqu'à l'onglet "Extensions" puis "Ajouter une nouvelle".
-3. Recherchez "Advanced Custom Fields" dans la barre de recherche.
-4. Cliquez sur "Installer maintenant", puis sur "Activer" une fois l'installation terminée.
-
-### ![Configuration de ACF](https://img.shields.io/badge/6.3-Configuration_de_ACF-33177b?style=flat-square)
-
-Une fois le plugin activé, vous pouvez accéder à ses paramètres en cliquant sur "Custom Fields" dans le menu de l'administration WordPress. Là, vous pouvez configurer différentes options selon vos besoins, telles que les autorisations d'affichage des champs personnalisés et les paramètres de mise en cache.
-
-### ![Création de champs personnalisés](https://img.shields.io/badge/6.4-Création_de_champs_personnalisés-33177b?style=flat-square)
+### ![Création de champs personnalisés](https://img.shields.io/badge/6.3-Création_de_champs_personnalisés-33177b?style=flat-square)
 
 Voici un exemple de déclaration de champ personnalisé :
 
@@ -298,12 +338,6 @@ Cette déclaration peut-être directement effectuée dans le fichier `functions.
 
 ![ACF Screenshot](images/acf-screenshot-2.png)
 
-### ![Liaison des champs ACF aux pages](https://img.shields.io/badge/6.5-Liaison_des_champs_ACF_aux_pages-33177b?style=flat-square)
+Et voici un exemple de rendu de ces mêmes champs en front, suite à un ajustement de la mise en page en CSS.
 
-Une fois les champs personnalisés créés, associez-les à vos pages en utilisant leur identifiant unique. Par exemple, pour associer le champ "titre_alternatif" à une page, utilisez le code suivant dans le fichier de modèle de la page :
-
-```php
-<?php $brand = get_field('marque'); ?>
-```
-
-En utilisant ces instructions, vous pouvez créer et associer des champs personnalisés avec ACF à vos pages WordPress pour une personnalisation avancée.
+![ACF Screenshot](images/acf-screenshot-3.png)
