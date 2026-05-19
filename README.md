@@ -413,10 +413,12 @@ Et voici un exemple de rendu de ces mêmes champs en front, suite à un ajusteme
 ## ![Notes](https://img.shields.io/badge/Notes-383d42?style=for-the-badge)
 
 ### ![](https://img.shields.io/badge/19.05.26-Objectif-00558a?style=flat-square)
-1. Intégrer le code de dépot suivant à votre site WordPress :
+1. Intégrer le code du dépot suivant à votre site WordPress :
     - https://github.com/FlorianJourde/IUT-3-Wordpress-Centre-auto-87
 
-2. S'approprier les fichiers et comprendre comment manipuler les styles (CSS) et templates (PHP)
+2. **S'approprier les fichiers** et comprendre comment manipuler les **styles** (CSS) et **templates** (PHP).
+
 3. Utiliser les fichiers `single.php` & `archive.php`, ainsi que le plugin ACF pour présenter les informations en lien avec le travail à réaliser pour la SAÉ, par exemple :
-    - Artiste : image, description, genre, pays d'origine, label, heure de passage ;
-    - Scène : image, description, nom, lieu...
+    - **Artiste** : image, description, genre, pays d'origine, label, heure de passage ;
+    - **Scène** : image, description, nom, lieu...
+Les champs devront provenir du **tableau de bord** de votre site WordPress et être créés depuis les pages par défaut de WordPress ainsi que les champs ACF.
