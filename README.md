@@ -421,4 +421,5 @@ Et voici un exemple de rendu de ces mêmes champs en front, suite à un ajusteme
 3. Utiliser les fichiers `single.php` & `archive.php`, ainsi que le plugin ACF pour présenter les informations en lien avec le travail à réaliser pour la SAÉ, par exemple :
     - **Artiste** : image, description, genre, pays d'origine, label, heure de passage ;
     - **Scène** : image, description, nom, lieu...
-Les champs devront provenir du **tableau de bord** de votre site WordPress et être créés depuis les pages par défaut de WordPress ainsi que les champs ACF.
+
+    Les champs devront provenir du **tableau de bord** de votre site WordPress et être créés via le système de **pages** ainsi que les champs ACF.
