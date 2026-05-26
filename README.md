@@ -428,7 +428,22 @@ Et voici un exemple de rendu de ces mêmes champs en front, suite à un ajusteme
 
 ### ![](https://img.shields.io/badge/26.05.26-Objectif-00558a?style=flat-square)
 1. Gérer les pages du menu via l'interface dédiée de WordPress :
-    - **Tableau de bord** > **Apparence** > **Menus** > **Pages** > **Structure** du menu (Backoffice)
+    - **Tableau de bord** > **Apparence** > **Menus** > **Pages** > **Structure** du menu (dashboard)
     
     On peut retrouver les menus "consommés" aux emplacements suivants :
-    - `/wp-content/themes/twentytwentyone-child/template-parts/header` (fichiers)
+    - `.../wp-content/themes/twentytwentyone-child/template-parts/header` (fichiers)
+    
+    Au sein de ce fichier, le menu est déclaré au niveau de la ligne suivante :
+    ```php
+    <?php wp_nav_menu(); ?>
+    ```
+
+2. Sur une page de type `archive`, présenter les artistes présents au festival. Au clic sur un artiste, une page dédiée `single` doit présenter les informations liées à celui-ci.
+
+3. Se familiariser avec l'ajout de champs personnalisés d'**ACF** (Advanced Custom Field). WordPress gère nativement le nom, l'image et la description, vous pouvez donc ajouter un ou plusieurs des champs suivants à un artise : **genre**, **pays d'origine**, **label**...
+
+N'hésitez pas à prendre des **initiatives** au niveau du site : design, structure, pages... C'est l'appropriation du template de base pour y intégrer vos assets qui sera évalué.
+
+Plus le site sera **personnel** et **cohérent** par rapport à l'objectif d'organisation d'un festival, meilleure sera l'appréciation !
+
+*Notes : Comme pour l'objectif précédent, il est possible d'utiliser les artistes du site [Rock en Seine](https://www.rockenseine.com/), en attendant le contenu définitif.*
