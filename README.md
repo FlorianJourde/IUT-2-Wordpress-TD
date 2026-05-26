@@ -428,7 +428,7 @@ Et voici un exemple de rendu de ces mêmes champs en front, suite à un ajusteme
 
 ### ![](https://img.shields.io/badge/26.05.26-Objectif-00558a?style=flat-square)
 1. Gérer les pages du menu via l'interface dédiée de WordPress :
-    - **Tableau de bord** > **Apparence** > **Menus** > **Pages** > **Structure** du menu (dashboard)
+    - **Tableau de bord** > **Apparence** > **Menus** > **Pages** > **Structure du menu** (dashboard)
     
     On peut retrouver les menus "consommés" aux emplacements suivants :
     - `.../wp-content/themes/twentytwentyone-child/template-parts/header/site-header.php` (fichiers)
