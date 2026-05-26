@@ -431,7 +431,7 @@ Et voici un exemple de rendu de ces mêmes champs en front, suite à un ajusteme
     - **Tableau de bord** > **Apparence** > **Menus** > **Pages** > **Structure** du menu (dashboard)
     
     On peut retrouver les menus "consommés" aux emplacements suivants :
-    - `.../wp-content/themes/twentytwentyone-child/template-parts/header` (fichiers)
+    - `.../wp-content/themes/twentytwentyone-child/template-parts/header/site-header.php` (fichiers)
     
     Au sein de ce fichier, le menu est déclaré au niveau de la ligne suivante :
     ```php
