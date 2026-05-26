@@ -425,3 +425,10 @@ Et voici un exemple de rendu de ces mêmes champs en front, suite à un ajusteme
     Les champs devront provenir du **tableau de bord** de votre site WordPress et être créés via le système de **pages** ainsi que les champs ACF.
 
 *Notes : Si vous n'avez pas d'inspiration pour trouver des **données** à afficher, vous pouvez, par exemple, reprendre les infos sur le site actuel de [Rock en Seine](https://www.rockenseine.com/) ou bien aller chercher les [assets](https://github.com/FlorianJourde/IUT-2-Wordpress-TD/tree/main/assets) mis à disposition lors de la précédente version de ce cours. L'idée étant que vous prépariez au maximum le site pour y intégrer vos **propres médias**, une fois votre **maquette** établie.*
+
+### ![](https://img.shields.io/badge/26.05.26-Objectif-00558a?style=flat-square)
+1. Gérer les pages du menu via l'interface dédiée de WordPress :
+    - **Tableau de bord** > **Apparence** > **Menus** > **Pages** > **Structure** du menu (Backoffice)
+    
+    On peut retrouver les menus "consommés" aux emplacements suivants :
+    - `/wp-content/themes/twentytwentyone-child/template-parts/header` (fichiers)
