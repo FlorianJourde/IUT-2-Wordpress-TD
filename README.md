@@ -440,7 +440,7 @@ Et voici un exemple de rendu de ces mêmes champs en front, suite à un ajusteme
 
 2. Sur une page de type `archive`, présenter les artistes présents au festival. Au clic sur un artiste, une page dédiée `single` doit présenter les informations liées à celui-ci.
 
-3. Se familiariser avec l'ajout de champs personnalisés d'**ACF** (Advanced Custom Field). WordPress gère nativement le nom, l'image et la description, vous pouvez donc ajouter un ou plusieurs des champs suivants à un artise : **genre**, **pays d'origine**, **label**...
+3. Se familiariser avec l'ajout de champs personnalisés d'**ACF** (Advanced Custom Field). WordPress gère nativement le **nom**, **l'image** et la **description**, vous pouvez donc ajouter un ou plusieurs des champs suivants à un artiste : **genre**, **pays d'origine**, **label**...
 
 N'hésitez pas à prendre des **initiatives** au niveau du site : design, structure, pages... C'est l'appropriation du template de base pour y intégrer vos assets qui sera évalué.
 
